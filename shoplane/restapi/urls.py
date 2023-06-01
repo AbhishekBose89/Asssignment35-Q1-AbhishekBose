@@ -1,5 +1,13 @@
 from django.urls import path
-from .views import MyCartView, SearchView, CartView, SearchViewId, CheckoutView
+from .views import (
+    MyCartView,
+    SearchView,
+    CartView,
+    SearchViewId,
+    CheckoutView,
+    UserRegister,
+    UserLogin,
+)
 from django.views.decorators.csrf import csrf_exempt
 
 
@@ -21,4 +29,6 @@ urlpatterns = [
         csrf_exempt(CheckoutView.as_view()),
         name="delete_product",
     ),
+    path("users/register/", csrf_exempt(UserRegister.as_view()), name="user_register"),
+    path("users/login/", csrf_exempt(UserLogin.as_view()), name="user_login"),
 ]

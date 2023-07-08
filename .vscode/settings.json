@@ -3,5 +3,5 @@
 		"editor.defaultFormatter": "ms-python.black-formatter"
 	},
 	"python.formatting.provider": "none",
-	"cSpell.words": ["restapi"]
+	"cSpell.words": ["djongo", "qlku", "restapi", "shoplane"]
 }
